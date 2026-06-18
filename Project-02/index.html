@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice-Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Invoice Generator</h1>
+        <p class="subtitle">// Tagged template literals . Real-World Project</p>
+
+        <div class="form-card">
+            <div class="form-grid">
+                <div>
+                    <label for="from-name">Your Name:</label>
+                    <input type="text" id="from-name" value="Raushan Bhai Patel">
+                </div>
+                <div>
+                    <label for="from-email">Your email:</label>
+                    <input type="email" id="from-email" value="rbpmicrosoft2025@gmail.com">
+                </div>
+
+            </div>
+
+            <div class="form-grid">
+                <div>
+                    <label for="to-name">Client Name: </label>
+                    <input type="text" id="to-name" value="Adrina Patel">
+                </div>
+                <div>
+                    <label for="to-email">Client email: </label>
+                    <input type="email" id="to-email" value="adrinapatel@gmail.com">
+                </div>
+            </div>
+
+            <div class="form-grid three">
+                <div>
+                    <label for="inv-num">Invoice #</label>
+                    <input type="" id="inv-num" value="INV-2024-057">
+                </div>
+                <div>
+                    <label for="inv-date">Date:</label>
+                    <input type="date" id="inv-date">
+                </div>
+                <div>
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date">
+                </div>
+            </div>
+
+            <div class="section-label">Items: </div>
+            <div id="items-container"></div>
+            <button class="btn btn-add-items" onclick="addItems()">+ items</button>
+            <button class="btn btn-generate-inv" onclick="generateInvoice()">Generate Invoice →</button>
+
+        </div>
+
+        <div id="preview" style="display:none"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
