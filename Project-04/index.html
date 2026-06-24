@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Directory</h1>
+
+        <div class="toolbar">
+            <input type="text" id="searchInput" placeholder="Search by name, role, location...">
+            <select id="deptFilter">
+                <option value="">All Deparments</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Design">Design</option>
+                <option value="Product">Product</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+            </select>
+        </div>
+
+        <table id="empTable">
+            <thead>
+                <tr>
+                    <th data-col="name">Name<span class="sort-icon">↕</span></th>
+                    <th data-col="dept">Department<span class="sort-icon">↕</span></th>
+                    <th data-col="role">Role<span class="sort-icon">↕</span></th>
+                    <th data-col="location">Location<span class="sort-icon">↕</span></th>
+                    <th data-col="status">Status<span class="sort-icon">↕</span></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <!--No Result Panel-->
+        <p id="noResults" class="no-results" style="display: none;" >No Employees Details</p>
+        
+        <!--Footer hint-->
+        <div class="footer">
+            <span id="rowCount"></span>
+            <span>Keys: <kbd>↑↓</kbd> navigate &nbsp; <kbd>Enter</kbd> details &nbsp; <kbd>Esc</kbd> close</span>
+        </div>
+        <!--Detail Panel-->
+        <div id="detailPanel" class="detail-panel"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

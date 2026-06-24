@@ -28,8 +28,8 @@ newRow.insertCell(1).innerText = "Sonu Kumar";
 newRow.insertCell(2).innerText = "47";
 newRow.insertCell(3).innerText = "84";
 
-// myTable.tBodies[0].deleteRow(1);
+// myTable.tBodies[0].deleteRow
 
 
-
-
+console.log(myTable.matches(".myTable"));
+console.log(myTable.closest("body"));
