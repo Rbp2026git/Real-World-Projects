@@ -59,7 +59,7 @@ table {
     font-size: 14px;
 }
 thead th {
-    text-align: center;
+    text-align: left;
     padding: 10px 12px;
     font-size: 12px;
     font-weight: 600;
@@ -69,12 +69,62 @@ thead th {
     user-select: none;
     white-space: nowrap;
 }
-thead th:hover {
-    color: #333;
+thead th:hover { color: #333; }
+thead th.sorted { color: #333; }
+tbody tr { cursor: pointer; outline: none; }
+tbody tr:hover td, tbody tr.focused-row td { background: #f7f7f7;}
+tbody tr:focus td { background: #eef4ff; }
+td{ padding: 10px 12px; border-bottom: 1px solid #f0f0f0; vertical-align: middle;}
+tbody tr:last-child td {border-bottom: none;}
+
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 600;
+    margin-right: 8px;
+    vertical-align: middle;
+    flex-shrink: 0;
 }
+.av-blue   { background: #dbeafe; color: #1e40af; }
+.av-purple { background: #ede9fe; color: #5b21b6; }
+.av-teal   { background: #d1fae5; color: #065f46; }
+.av-amber  { background: #fef3c7; color: #92400e; }
+.av-coral  { background: #fee2e2; color: #991b1b; }
+
+.name-cell { display: flex; align-items: center;}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.badge-eng     { background: #dbeafe; color: #1e40af; }
+.badge-design  { background: #ede9fe; color: #5b21b6; }
+.badge-product { background: #d1fae5; color: #065f46; }
+.badge-hr      { background: #fef3c7; color: #92400e; }
+.badge-finance { background: #fee2e2; color: #991b1b; }
+
+/* Status dot */
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.dot-active  { background: #10b981; }
+.dot-away    { background: #f59e0b; }
+.dot-offline { background: #9ca3af; }
 
 
-
+/* ---------------- Footer -------------- */
 .footer {
     margin-top: 12px;
     display: flex;
@@ -91,4 +141,44 @@ kbd {
     padding: 1px 5px;
     font-size: 11px;
     font-family: monospace;
+}
+
+
+/* ------------------ Detail panel --------------- */
+.detail-panel {
+  display: none;
+  margin-top: 16px;
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.detail-panel.visible {
+  display: block;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  margin-top: 12px;
+}
+
+.detail-label {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.detail-value {
+  font-size: 13px;
+  color: #222;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #aaa;
+  font-size: 14px;
 }
